@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h2>Регистрация</h2>
+        <form method="post">
+            <div class="mb-3">
+                <label>Имя пользователя</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Мастер-пароль</label>
+                <input type="password" name="password" class="form-control" required>
+                <small>Пароль будет использоваться для входа и шифрования. Не забывайте его!</small>
+            </div>
+            <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+            <a href="/login" class="btn btn-link">Уже есть аккаунт? Войти</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Редактирование записи</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Сайт</label>
+        <input type="text" name="site" class="form-control" value="{{ entry.site }}" required>
+    </div>
+    <div class="mb-3">
+        <label>URL</label>
+        <input type="text" name="url" class="form-control" value="{{ entry.url or '' }}">
+    </div>
+    <div class="mb-3">
+        <label>Логин</label>
+        <input type="text" name="login" class="form-control" value="{{ entry.login }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Новый пароль</label>
+        <div class="input-group">
+            <input type="password" name="password" id="passwordField" class="form-control">
+            <button type="button" class="btn btn-outline-secondary" id="generatePasswordBtn">Сгенерировать</button>
+        </div>
+        <small>Оставьте пустым, если не хотите менять</small>
+    </div>
+    <button type="submit" class="btn btn-warning">Сохранить изменения</button>
+    <a href="/vault" class="btn btn-secondary">Отмена</a>
+</form>
+{% endblock %}

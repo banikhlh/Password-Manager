@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Новая запись</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Сайт</label>
+        <input type="text" name="site" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>URL (необязательно)</label>
+        <input type="text" name="url" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Логин</label>
+        <input type="text" name="login" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Пароль</label>
+        <div class="input-group">
+            <input type="password" name="password" id="passwordField" class="form-control" required>
+            <button type="button" class="btn btn-outline-secondary" id="generatePasswordBtn">Сгенерировать</button>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Сохранить</button>
+    <a href="/vault" class="btn btn-secondary">Отмена</a>
+</form>
+{% endblock %}
